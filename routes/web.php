@@ -15,6 +15,18 @@ Route::get('kategori', function () {
     return "halaman_kategori";
 });
 
+Route::get('layouts', function(){
+    return view('layouts.master');
+});
+
+Route::get('dashboard', function(){
+	return view('dashboard.index');
+});
+
+Route::get('dashboard2', function(){
+	return view('dashboard/dashboard');
+});
+
 //Route::resource('kategori','KategoriController')->only(['destroy']);
 Route::resource('kategori','KategoriController')->except(['destroy']);
 
